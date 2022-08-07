@@ -1,0 +1,22 @@
+// utils styles
+@import "./utils/vars";
+
+// base styles
+@import "./base/reset";
+@import "./base/style";
+@import "./base/common";
+
+// components styles
+@import "./components/container";
+@import "./components/buttons";
+@import "./components/section";
+@import "./components/current-page";
+@import "./components/card-set";
+@import "./components/advantages";
+@import "./components/team-section";
+@import "./components/section-title";
+@import "./components/menu";
+
+
+// layouts styles
+@import "./layouts/header";  
