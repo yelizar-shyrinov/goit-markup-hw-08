@@ -82,7 +82,7 @@
   margin-right: auto;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-color: #c4c4c4;
 
   background-image: linear-gradient(to right,
@@ -120,7 +120,7 @@
     height: 400px;
   }
   }  
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     background-image: linear-gradient(to right,
       rgba(0, 0, 0, 0.4),
       rgba(47, 48, 58, 0.4)),
@@ -249,6 +249,9 @@ display: block;
   display: block;
   cursor: pointer;
   transition: background-color 250ms var(--timing-function);
+
+
+  
 }
 
 .portfolio-list {
@@ -407,6 +410,7 @@ display: block;
 
 .portfolio-images-list {
   display: flex;
+
   margin-bottom: 0;
 }
 
@@ -484,7 +488,7 @@ display: block;
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
 
   @media screen and (max-width: 1199px) {
     flex-direction: column;

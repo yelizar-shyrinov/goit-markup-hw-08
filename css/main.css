@@ -140,7 +140,7 @@ html {
   margin-right: auto;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-color: #c4c4c4;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/webstudio/header.img.sm.jpg);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)), url(../img/webstudio/header.img.sm.jpg);
@@ -166,13 +166,13 @@ html {
     height: 400px;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/webstudio/header.img.lg.jpg);
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)), url(../img/webstudio/header.img.lg.jpg);
   }
 }
-@media screen and (max-width: 1200px) and (min-device-pixel-ration: 2), screen and (max-width: 1200px) and (-webkit-min-device-pixel-ration: 2), screen and (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1200px) and (min-resolution: 192dpi), screen and (max-width: 1200px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 1199px) and (min-device-pixel-ration: 2), screen and (max-width: 1199px) and (-webkit-min-device-pixel-ration: 2), screen and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1199px) and (min-resolution: 192dpi), screen and (max-width: 1199px) and (min-resolution: 2dppx) {
   .overlay {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/webstudio/header.img@2x.lg.jpg);
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(47, 48, 58, 0.4)), url(../img/webstudio/header.img@2x.lg.jpg);
@@ -581,9 +581,9 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 @media screen and (max-width: 1199px) {
   .footer-container {
@@ -1091,6 +1091,12 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+@media screen and (max-width: 1199px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 
 .current-page {
   position: relative;
@@ -1141,16 +1147,8 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-@media screen and (min-width: 768px) {
-  .advantages {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .advantages {
-    padding-top: 94px;
-    padding-bottom: 94px;
     --items: 4;
   }
 }
@@ -1173,10 +1171,6 @@ body {
   line-height: 24px;
 }
 
-.team-section {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
 .team-section__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1184,18 +1178,6 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 30px;
-}
-@media screen and (min-width: 768px) {
-  .team-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .team-section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
 }
 .team-section .social-media {
   display: -webkit-box;
@@ -1243,6 +1225,11 @@ body {
   line-height: 1.14;
   font-size: 14px;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .section-title.skills {
+    text-align: center;
+  }
 }
 
 .menu {
@@ -1354,10 +1341,22 @@ body {
   font-size: 30px;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 767px) {
+  .contacts-item-phone {
+    width: 296px;
+    height: 40px;
+  }
+}
 
 .contacts-item-email {
   font-size: 16px;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .contacts-item-email {
+    width: 231px;
+    height: 28px;
+  }
 }
 
 .mobile-menu {
@@ -1376,6 +1375,15 @@ body {
   -webkit-transition: color 250ms var(--timing-function);
   transition: color 250ms var(--timing-function);
 }
+@media screen and (max-width: 767px) {
+  .mobile-menu-item-link {
+    font-size: 40px;
+    line-height: 1.18;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+}
 .mobile-menu-item-link:hover, .mobile-menu-item-link:focus {
   color: var(--accent-color);
 }
@@ -1388,6 +1396,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: absolute;
   bottom: 40px;
   font-weight: 500;
